@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face{
+  font-family: cubic-11;
+  src: url(Cubic_11_1.300_R.woff);
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,6 +20,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 100dvw;
+  min-height: 100dvh;
 }
 
 a {
@@ -27,10 +35,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* display: flex; */
+  /* place-items: center; */
+  min-width: 100dvw;
+  min-height: 100dvh;
 }
 
 h1 {
@@ -62,9 +70,9 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
+  min-width: 100dvw;
+  min-height: 100dvh;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
