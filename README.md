@@ -10,3 +10,4 @@ source .venv/bin/activate.sh
 pip install -r requirements.txt
 fastapi dev server.py
 ```
+Recommand node version over 20
