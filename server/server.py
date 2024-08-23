@@ -4,9 +4,16 @@ from fastapi.responses import RedirectResponse, StreamingResponse
 import sched, time
 import fetcher
 from multiprocessing import Process
+from requests import exceptions
+import sys
 
 # Pre-Run to fetch the origin data
-fetcher.fetcher()
+try:
+    fetcher.fetcher()
+except exceptions.ConnectionError:
+    print("No Connection")
+    sys.exit(1)
+    
 
 def schedule_runner():
     schedule = sched.scheduler(time.time, time.sleep)
